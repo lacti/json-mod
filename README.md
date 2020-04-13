@@ -56,7 +56,7 @@ Update a new `value` into the `resource` with the specified `path`. If `path` is
 type CurrentKey = undefined;
 type MultipleSubKeys = string[];
 
-interface ModifyOperation {
+interface RemoveOperation {
   resource: ResourceValue | null;
   path: string;
   value: CurrentKey | MultipleSubKeys;
