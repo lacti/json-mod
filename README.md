@@ -29,6 +29,7 @@ I think source codes in `__tests__` can help to use this library.
 
 ```typescript
 interface AppendOperation {
+  operation: "append";
   resource: ResourceValue | null;
   path: string;
   value: KeyValue | ArrayValue;
@@ -42,6 +43,7 @@ Add a new `value` into the `resource` with the specified `path`. If there is no 
 
 ```typescript
 interface ModifyOperation {
+  operation: "modify";
   resource: ResourceValue | null;
   path: string;
   value: KeyValue | ArrayValue;
@@ -57,6 +59,7 @@ type CurrentKey = undefined;
 type MultipleSubKeys = string[];
 
 interface RemoveOperation {
+  operation: "remove";
   resource: ResourceValue | null;
   path: string;
   value: CurrentKey | MultipleSubKeys;
