@@ -1,0 +1,1 @@
+{"version":3,"file":"ensureKeyValue.js","sourceRoot":"","sources":["../../src/resource/ensureKeyValue.ts"],"names":[],"mappings":";;AAGA,SAAwB,cAAc,CAAC,KAAoB;IACzD,IAAI,KAAK,YAAY,KAAK,EAAE;QAC1B,MAAM,IAAI,KAAK,CAAC,sCAAsC,CAAC,CAAC;KACzD;IACD,IAAI,CAAC,CAAC,KAAK,YAAY,MAAM,CAAC,EAAE;QAC9B,MAAM,IAAI,KAAK,CAAC,2CAA2C,CAAC,CAAC;KAC9D;IACD,OAAO,KAAK,CAAC;AACf,CAAC;AARD,iCAQC"}
