@@ -1,4 +1,4 @@
-import processAppendOperation from "../../src/update/processAppendOperation";
+import processAppendOperation from "../../src/process/processAppendOperation";
 
 test("processAppendOperation-appendKeyValueToRootWithNullResource", () => {
   expect(

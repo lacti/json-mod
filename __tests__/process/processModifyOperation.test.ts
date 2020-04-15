@@ -1,4 +1,4 @@
-import processModifyOperation from "../../src/update/processModifyOperation";
+import processModifyOperation from "../../src/process/processModifyOperation";
 
 test("processModifyOperation-modifyKeyValueToRootWithNullResource", () => {
   expect(() =>

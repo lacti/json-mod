@@ -5,14 +5,14 @@ import ensureArrayValue from "../resource/ensureArrayValue";
 import ensureKeyValue from "../resource/ensureKeyValue";
 import KeyValue from "../resource/keyValue";
 import ResourceValue from "../resource/resourceValue";
-import UpdateOperationContext from "./updateContext";
+import OperationContext from "./operationContext";
 
 export default function processAppendOperation({
   resource,
   path,
   value,
-  upsert
-}: UpdateOperationContext<AppendOperation>): ResourceValue {
+  upsert,
+}: OperationContext<AppendOperation>): ResourceValue {
   const initialValue = resolveInitialValue(value);
   const ensuredResource = ensureResource(
     resource,

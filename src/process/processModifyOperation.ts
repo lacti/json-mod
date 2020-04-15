@@ -2,13 +2,13 @@ import ModifyOperation from "../operation/modifyOperation";
 import ensureKeyValue from "../resource/ensureKeyValue";
 import readValue from "../resource/readValue";
 import ResourceValue from "../resource/resourceValue";
-import UpdateOperationContext from "./updateContext";
+import OperationContext from "./operationContext";
 
 export default function processModifyOperation({
   resource,
   path,
-  value
-}: UpdateOperationContext<ModifyOperation>): ResourceValue {
+  value,
+}: OperationContext<ModifyOperation>): ResourceValue {
   if (resource === null) {
     throw new Error("Invalid modification: resource does not exist");
   }

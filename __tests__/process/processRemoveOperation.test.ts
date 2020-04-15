@@ -1,4 +1,4 @@
-import processRemoveOperation from "../../src/update/processRemoveOperation";
+import processRemoveOperation from "../../src/process/processRemoveOperation";
 
 test("processRemoveOperation-skipWithNullResource", () => {
   expect(

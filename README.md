@@ -1,6 +1,6 @@
 # JSON modification protocol
 
-Update JSON object with simple operations such as `append`, `modify` and `remove`.
+Update JSON object with simple operations such as `append`, `modify`, `remove` and `fetch`. I know `fetch` is not a sort of modification but I think we should see an object before modification.
 
 ## Data types
 
@@ -23,7 +23,7 @@ root.some.thing.value.key
 
 ## Operations
 
-I think source codes in `__tests__` can help to use this library.
+I think test codes can help to use this library.
 
 ### Append
 
@@ -62,11 +62,27 @@ interface RemoveOperation {
   operation: "remove";
   resource: ResourceValue | null;
   path: string;
-  value: CurrentKey | MultipleSubKeys;
+  key: CurrentKey | MultipleSubKeys;
 }
 ```
 
 Delete a `path` from the `resource` if `value` is undefined, or delete keys in `value` from the `resource` with the specified `path`. It would be ignored even if there is nothing to delete.
+
+### Fetch
+
+```typescript
+type CurrentKey = undefined;
+type MultipleSubKeys = string[];
+
+interface FetchOperation {
+  operation: "fetch";
+  resource: ResourceValue | null;
+  path: string;
+  key: CurrentKey | MultipleSubKeys;
+}
+```
+
+Fetch a value or values from the `resource` with the specified `path`. If `path` is empty, it would fetch a whole thing. If `key` is defined as array, it would return values which can be `null[]` when there are no values mapped with keys.
 
 ## License
 
