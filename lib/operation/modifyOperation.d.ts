@@ -1,6 +1,6 @@
 import KeyValue from "../resource/keyValue";
-import UpdateOperationBase from "./updateOperationBase";
-export default interface ModifyOperation extends UpdateOperationBase {
+import OperationBase from "./operationBase";
+export default interface ModifyOperation extends OperationBase {
     operation: "modify";
     value: KeyValue;
 }
