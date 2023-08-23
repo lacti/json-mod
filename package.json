@@ -17,9 +17,9 @@
   "scripts": {
     "prebuild": "rm -rf lib",
     "build": "tsc",
-    "pretest": "yarn build",
+    "pretest": "npm run build",
     "test": "jest",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "npm test"
   },
   "repository": {
     "type": "git",
@@ -35,13 +35,13 @@
   },
   "homepage": "https://github.com/lacti/json-mod#readme",
   "devDependencies": {
-    "@types/jest": "^25.2.1",
-    "@types/node": "12",
-    "jest": "^25.3.0",
-    "prettier": "^2.0.4",
-    "ts-jest": "^25.3.1",
+    "@types/jest": "^29.5.4",
+    "@types/node": "20",
+    "jest": "^29.6.3",
+    "prettier": "^3.0.2",
+    "ts-jest": "^29.1.1",
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.8.3"
+    "typescript": "^5.1.6"
   }
 }
