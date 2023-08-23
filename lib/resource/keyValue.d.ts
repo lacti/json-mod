@@ -1,5 +1,5 @@
 import ResourceValue from "./resourceValue";
-declare type KeyValue = {
+type KeyValue = {
     [key: string]: ResourceValue;
 };
 export default KeyValue;

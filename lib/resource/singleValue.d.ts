@@ -1,2 +1,2 @@
-declare type SingleValue = string | number;
+type SingleValue = string | number;
 export default SingleValue;
